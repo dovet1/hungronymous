@@ -1,8 +1,10 @@
-<h1>Hungronymous</h1>
-<% @restaurants.each do |restaurant| %>
-  <%= link_to restaurant_path(restaurant) do %>
-    <p><%= restaurant.name %></p>
+<div class="container">
+  <h1>Hungronymous</h1>
+  <% @restaurants.each do |restaurant| %>
+    <%= link_to restaurant_path(restaurant) do %>
+      <p><%= restaurant.name %></p>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= link_to "Add new review", new_restaurant_path %>
+  <%= link_to "Add new review", new_restaurant_path %>
+</div>
