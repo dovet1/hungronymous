@@ -9,9 +9,21 @@
 #home-video-wrapper {
 height: 100vh;
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
+font-family: 'Lexend Deca', sans-serif;
 }
-h1#home {
+#home {
   color: white;
+}
+
+.featured-restaurants {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lexend Deca', sans-serif;
+
 }

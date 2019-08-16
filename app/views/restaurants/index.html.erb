@@ -1,10 +1,15 @@
 <div class="container">
-  <h1>Hungronymous</h1>
+  <h1>Hungronymous reviews</h1>
   <% @restaurants.each do |restaurant| %>
     <%= link_to restaurant_path(restaurant) do %>
-      <p><%= restaurant.name %></p>
+      <div class="card-product" data-aos="zoom-out-right">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2><%= restaurant.name %></h2>
+          <p><%= restaurant.review[0..140] %></p>
+        </div>
+      </div>
     <% end %>
   <% end %>
-
-  <%= link_to "Add new review", new_restaurant_path %>
 </div>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>

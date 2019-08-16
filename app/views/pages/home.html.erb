@@ -1,4 +1,21 @@
 <div id="home-video-wrapper">
   <%= video_tag "restaurant.mp4", autoplay: true, loop: true, mute: true, id: "home-video" %>
-  <h1 id="home"> Hungronymous</h1>
+  <div>
+    <h1 id="home">Hungronymous</h1>
+  </div>
+  <div>
+    <h4 id="home">Probably the best food critic in the world</h4>
+  </div>
+  <div>
+    <a class="btn btn-primary" href="restaurants#index" role="button">Enter</a>
+  </div>
+</div>
+
+<div class="featured-restaurants">
+  <h1>Recently reviewed restaurants</h1>
+  <ol>
+    <% @three_restaurants.each do |restaurant| %>
+    <li><%= restaurant.name %></li>
+    <% end %>
+  </ol>
 </div>
