@@ -16,6 +16,11 @@
 //= require turbolinks
 //= require_tree .
 
-$ (function () {
-  AOS.init ();
-});
+// $ (function () {
+//   AOS.init ();
+// });
+
+// $('.carousel').carousel({
+//   interval: 6000,
+//   pause: "false"
+// });

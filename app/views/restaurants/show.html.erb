@@ -1,7 +1,9 @@
 <div class="container restaurant-details">
-  <h1><%= @restaurant.name %></h1>
+  <h1 class="show-header"><%= @restaurant.name %></h1>
   <p>Rating: <%= @restaurant.stars %></p>
   <p>Review: <%= @restaurant.review %></p>
-  <%= link_to "Edit review", edit_restaurant_path, class: "btn btn-primary" %>
-  <%= link_to "Delete review", restaurant_path, method: :delete, class: "btn btn-primary" %>
+  <% if current_user == @restaurant.user %>
+    <%= link_to "Edit review", edit_restaurant_path, class: "btn btn-primary" %>
+    <%= link_to "Delete review", restaurant_path, method: :delete, class: "btn btn-primary" %>
+  <% end %>
 </div>

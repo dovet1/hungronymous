@@ -11,11 +11,19 @@
   </div>
 </div>
 
-<div class="featured-restaurants">
+<!-- <div class="featured-restaurants"> -->
   <h1>Recently reviewed restaurants</h1>
-  <ol>
-    <% @three_restaurants.each do |restaurant| %>
-    <li><%= restaurant.name %></li>
-    <% end %>
-  </ol>
-</div>
+  <% @three_restaurants.each do |restaurant| %>
+    <div class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <%= image_tag "https://picsum.photos/id/310/200/300" %>
+          <div class="carousel-caption d-none d-md-block">
+            <h5><%= restaurant.name %></h5>
+            <p><%= restaurant.review %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<!-- </div> -->

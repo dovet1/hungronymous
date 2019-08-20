@@ -9,7 +9,6 @@ class RestaurantsController < ApplicationController
   def new
     @restaurant = Restaurant.new
     authorize @restaurant
-
   end
 
   def create
@@ -37,7 +36,9 @@ class RestaurantsController < ApplicationController
   end
 
   def destroy
+    @restaurant.destroy
     authorize @restaurant
+    redirect_to restaurants_path
   end
 
   def show
@@ -54,4 +55,5 @@ class RestaurantsController < ApplicationController
   def set_restaurant
     @restaurant = Restaurant.find(params[:id])
   end
+
 end
